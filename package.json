@@ -1,5 +1,5 @@
 {
-  "name": "api-generator",
+  "name": "api-url-tree-generator",
   "version": "1.0.0",
   "main": "esm/index.js",
   "private": false,
