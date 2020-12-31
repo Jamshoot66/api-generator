@@ -1,5 +1,6 @@
 {
   "name": "api-url-tree-generator",
+  "description": "Generates an object with API urls as values",
   "keywords": [
     "api",
     "generator",
