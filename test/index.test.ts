@@ -14,11 +14,13 @@ describe("Testing api generator", () => {
 
   it("Should contain nested node nodes urls", () => {
     const api = apiGenerator(baseUrl, apiTree);
+    // @ts-ignore
     expect(`${api.nested["nested-first"]}`).toBe(expectedApi.nestedNestedFirst);
   });
 
   it("Should contain deep nested nodes", () => {
     const api = apiGenerator(baseUrl, apiTree);
+    // @ts-ignore
     expect(`${api.nested["nested-third"].last}`).toBe(
       expectedApi.nestedNestedThirdLast
     );
@@ -31,6 +33,7 @@ describe("Testing api generator", () => {
 
   it("Should contain deep nested nodes with tailing slash", () => {
     const api = apiGenerator(baseUrl, apiTree, { withTailingSlash: true });
+    // @ts-ignore
     expect(`${api.nested["nested-third"].last}`).toBe(
       expectedApi.nestedNestedThirdLastWithTail
     );
