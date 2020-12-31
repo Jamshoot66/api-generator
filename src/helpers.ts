@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/prefer-default-export
 export const sanitize = (url: string) => {
   const protocolRegex = new RegExp(/^(https?:\/+)/);
   const protocol = url.match(protocolRegex)?.[0] || "";
@@ -6,3 +5,6 @@ export const sanitize = (url: string) => {
   const sanitized = protocollessUrl.replace(/\/+/g, "/");
   return protocol + sanitized;
 };
+
+export const getTail = (withTailingSlash: boolean) =>
+  withTailingSlash ? "/" : "";

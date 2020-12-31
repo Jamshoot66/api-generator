@@ -16,11 +16,23 @@ describe("Testing api generator", () => {
     const api = apiGenerator(baseUrl, apiTree);
     expect(`${api.nested["nested-first"]}`).toBe(expectedApi.nestedNestedFirst);
   });
-  
+
   it("you shouldn't contain deep nested nodes", () => {
     const api = apiGenerator(baseUrl, apiTree);
     expect(`${api.nested["nested-third"].last}`).toBe(
       expectedApi.nestedNestedThirdLast
+    );
+  });
+
+  it("you shouldn't contain single nodes with tailing slash", () => {
+    const api = apiGenerator(baseUrl, apiTree, { withTailingSlash: true });
+    expect(api.first).toBe(expectedApi.firstWithTail);
+  });
+
+  it("you shouldn't contain deep nested nodes with tailing slash", () => {
+    const api = apiGenerator(baseUrl, apiTree, { withTailingSlash: true });
+    expect(`${api.nested["nested-third"].last}`).toBe(
+      expectedApi.nestedNestedThirdLastWithTail
     );
   });
 });
