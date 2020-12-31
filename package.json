@@ -1,5 +1,11 @@
 {
   "name": "api-url-tree-generator",
+  "keywords": [
+    "api",
+    "generator",
+    "frontend",
+    "url"
+  ],
   "version": "1.0.4",
   "main": "esm/src/index.js",
   "private": false,
