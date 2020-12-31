@@ -16,4 +16,11 @@ describe("Testing api generator", () => {
     const api = apiGenerator(baseUrl, apiTree);
     expect(`${api.nested["nested-first"]}`).toBe(expectedApi.nestedNestedFirst);
   });
+  
+  it("you shouldn't contain deep nested nodes", () => {
+    const api = apiGenerator(baseUrl, apiTree);
+    expect(`${api.nested["nested-third"].last}`).toBe(
+      expectedApi.nestedNestedThirdLast
+    );
+  });
 });
