@@ -2,6 +2,17 @@
 
 Generates an object with API urls as values
 
+## Installation
+
+```bash
+npm install --save-dev api-url-tree-generator
+```
+or
+
+```bash
+yarn add --dev api-url-tree-generator
+```
+
 ## Usage
 
 ```javascript
