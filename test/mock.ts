@@ -17,5 +17,5 @@ export const expectedApi = {
   second: `${baseUrl}/${apiTree.second}`,
   nested: `${baseUrl}/nested`,
   nestedNestedFirst: `${baseUrl}/nested/${apiTree.nested["nested-first"]}`,
-  nestedNestedThirdLast: `${baseUrl}/nested/${apiTree.nested["nested-third"].last}`,
+  nestedNestedThirdLast: `${baseUrl}/nested/nested-third${apiTree.nested["nested-third"].last}`,
 };
